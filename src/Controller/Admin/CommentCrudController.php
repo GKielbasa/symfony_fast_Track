@@ -1,5 +1,5 @@
 <?php
-
+//https://symfony.com/doc/6.2/the-fast-track/pl/9-backend.html
 namespace App\Controller\Admin;
 
 use App\Entity\Comment;
@@ -51,6 +51,14 @@ class CommentCrudController extends AbstractCrudController
         }else {
             yield $createdAt;
         }
-
+    }
+    public function configureFilters(Filters $filters): Filters
+    {
+        return $filters
+            ->add('author')
+            ->add('email')
+            ->add('text')
+            ->add('conference')
+        ;
     }
 }

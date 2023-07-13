@@ -42,7 +42,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Guestbook');
+            ->setTitle('Guestbook. Nav Panel');
     }
 
     public function configureMenuItems(): iterable
